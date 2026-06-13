@@ -1,14 +1,17 @@
 from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
+import warnings
+warnings.filterwarnings("ignore")
 from dotenv import load_dotenv
 load_dotenv()
 
+# Initialize the chat model
 llm = HuggingFaceEndpoint(
-    repo_id = 'meta-llama/Meta-Llama-3-8B-Instruct',
-    task = 'text-generation',
-    max_new_tokens = 100,
-    temperature = 0.5
+    repo_id="meta-llama/Llama-3.2-3B-Instruct",  # Hugging Face model repo
+    task = "text-generation",
+    temperature = 0,
+    max_new_tokens= 1000,
 )
 
-chatmodel = ChatHuggingFace(llm = llm)
-response = chatmodel.invoke("What is Machine learning?")
+model = ChatHuggingFace(llm = llm)
+response = model.invoke("Explain ANN in simple manner?")
 print(response.content)
