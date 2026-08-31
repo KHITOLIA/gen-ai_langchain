@@ -1,0 +1,1 @@
+{"description": "Multiply two numbers", "properties": {"a": {"title": "A", "type": "integer"}, "b": {"title": "B", "type": "integer"}}, "required": ["a", "b"], "title": "multiply", "type": "object"}
