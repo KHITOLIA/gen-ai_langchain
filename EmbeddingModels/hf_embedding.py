@@ -8,3 +8,5 @@ query = "hello how are you?"
 
 print(embedding_model.embed_query(query))
 print(f"Execution time: {time.time() - start_time}")
+
+print(len(embedding_model.embed_query(query)))

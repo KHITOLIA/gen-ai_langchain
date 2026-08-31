@@ -6,12 +6,12 @@ load_dotenv()
 
 # Initialize the chat model
 llm = HuggingFaceEndpoint(
-    repo_id="meta-llama/Llama-3.2-3B-Instruct",  # Hugging Face model repo
+    repo_id="openai/gpt-oss-120b",  # Hugging Face model repo
     task = "text-generation",
     temperature = 0,
     max_new_tokens= 1000,
 )
 
 model = ChatHuggingFace(llm = llm)
-response = model.invoke("Explain ANN in simple manner?")
+response = model.invoke("who started anglo india moment?")
 print(response.content)

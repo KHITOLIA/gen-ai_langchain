@@ -4,9 +4,8 @@ embedding_model = HuggingFaceEmbeddings(model_name = "sentence-transformers/all-
 query = "Delhi is the capital of india"
 documents = [
     "this is my arena",
-    "i'll be a multibillionoire super soon",
-    "I love you jaspreet so much"
+    "i'll be a multibillionoire super soon"
 ]
 vector = embedding_model.embed_documents(documents)
 
-print(vector)
+print(len(vector))
